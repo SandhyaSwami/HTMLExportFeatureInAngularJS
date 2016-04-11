@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="html2PDF">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML2PDFInAngularjs</title>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.1/angular.js"></script>
+    <script type="text/javascript" src="plugins/tableExport.js"></script>
+    <script type="text/javascript" src="plugins/jquery.base64.js"></script>
+    <script type="text/javascript" src="plugins/html2canvas.js"></script>
+    <script type="text/javascript" src="jspdf/libs/sprintf.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.js"></script>
+    <script type="text/javascript" src="jspdf/libs/base64.js"></script>
+    <script type="text/javascript" src="lib/FileSaver.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.controller.js"></script>
+    <!--<script type="text/javascript" src="jspdf/libs/base64.js"></script>-->
+
+</head>
+<body ng-controller="HTML2PDFController as vm">
+<h1>Wel Come to C for CAR(CCAR) 14A</h1>
+<input type="button" ng-click="vm.exportGrid()" value="Export Grid in PDF format">
+<input type="button" ng-click="vm.exportGridToDocFormat()" value="Export Grid in MS-Word format">
+<input type="button" ng-click="vm.exportGridToExcelFormat()" value="Export Grid in MS-Excel format">
+<table class="table export-table" id="table111">
+    <thead>
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Product
+        </th>
+        <th>
+            Payment Taken
+        </th>
+        <th>
+            Status
+        </th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr><tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Default
+        </td>
+
+    </tr>
+    <tr class="active">
+        <td>
+            1
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            01/04/2012
+        </td>
+        <td>
+            Approved
+        </td>
+
+    </tr>
+    <tr class="success">
+        <td>
+            2
+        </td>
+        <td>
+            TB - Monthly
+        </td>
+        <td>
+            02/04/2012
+        </td>
+        <td>
+            Declined
+        </td>
+
+    </tr>
+
+
+
+
+    </tbody>
+</table>
+</body>
+</html>
