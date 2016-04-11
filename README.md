@@ -1,21 +1,18 @@
-Welcome to the world of Multi-Image Responsive Carousel!
+Welcome to the world of Export Feature in AngularJS. Export HTML Table to  PDF file, MS-Word document and MS-Excel Sheet!
 ===================
 
  
 [Demo](http://sandhyaswami.github.io/MultiImageResponsiveCarousel/index.html)
 ===
-Now a days we are developing ***Responsive Web Applications*** and we want them should work across all the devices like 
 
- - ***Smart Phones***
- - ***Tablets***
- - ***Laptops and***
- - **On Extra Large Desktops Screens**
+Now a  days a lot of applications requires to  have ***export features*** like ***HTML to PDF file, MS-Word and MS-Excel***.
 
-At the same time we want to have ***Single Code*** ***Base*** for all the above devices.
+I have searched it on internet but there were no plugins in AngularJS.
 
-It is bit difficult to find a ***Responsive Carousel*** which works perfectly on all devices and at the same time it should be ***highly customisable*** and ***light weight***.
+So  I  have developed a reusable component/plugin in AngularJS that can ***export table into various file formats like PDF, Word and  Excel***.
 
-I have developed a very simple ***Multi-Image Carousel*** for all the devices using **bootstrap and jQuery.**
+
+
 
 > **Note:**It is free, you can download and use in your personal applications as well as in commercial applications.
 
