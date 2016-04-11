@@ -2,7 +2,7 @@ Welcome to the world of Export Feature in AngularJS. Export HTML Table to  PDF f
 ===================
 
  
-[Demo](http://sandhyaswami.github.io/MultiImageResponsiveCarousel/index.html)
+[Demo](http://sandhyaswami.github.io/HTMLExportFeatureInAngularJS/index.html)
 ===
 
 Now a  days a lot of applications requires to  have ***export features*** like ***HTML to PDF file, MS-Word and MS-Excel***.
